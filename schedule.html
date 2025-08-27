@@ -19,8 +19,8 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script defer src="assets/js/main.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script defer src="/assets/js/main.js"></script>
 </head>
 
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
@@ -30,7 +30,7 @@
       <div class="flex justify-between">
         <div class="flex space-x-4 items-center">
           <a href="index.html" class="flex items-center py-4 px-2 gap-3">
-            <img src="monogram_ng.jpg" alt="NG" class="h-8 w-8 rounded ring-2 ring-skybolt" />
+            <img src="/assets/img/monogram_ng.jpg" alt="NG" class="h-8 w-8 rounded ring-2 ring-skybolt" />
             <span class="font-extrabold tracking-wide text-xl">Nitty Gritty Baseball</span>
           </a>
           <!-- Primary Nav -->
@@ -58,89 +58,88 @@
     </div>
   </nav>
 
-<main class="flex-1">
-<!-- Tournaments with right-side image + gradient -->
-<section class="relative overflow-hidden">
-  <!-- Right image panel (only on md+) -->
-  <div class="absolute inset-y-0 right-0 w-1/2 hidden md:block">
-    <img src="logo_alt.jpg" alt=""
-         class="w-full h-full object-cover">
-    <!-- Fade left so the list stays readable -->
-    <div class="absolute inset-0 bg-gradient-to-l from-transparent via-white/60 to-white"></div>
-  </div>
+  <main class="flex-1">
+    <!-- Tournaments with navy gradient background + right image -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white">
+      <!-- Right image panel (only on md+) -->
+      <div class="absolute inset-y-0 right-0 w-1/2 hidden md:block">
+        <img src="/assets/img/logo_alt.jpg" alt=""
+             class="w-full h-full object-cover">
+        <!-- Dark fade left so list stays readable and blends with navy -->
+        <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
+      </div>
 
-  <!-- Content (wider than before) -->
-  <div class="relative max-w-7xl mx-auto px-4 py-12 md:py-16">
-    <h2 class="text-3xl font-extrabold mb-6">Tournaments</h2>
+      <!-- Content -->
+      <div class="relative max-w-7xl mx-auto px-4 py-12 md:py-16">
+        <h2 class="text-3xl font-extrabold mb-6">Tournaments</h2>
 
-    <!-- Make the list take more horizontal space -->
-    <div class="md:w-[62%] lg:w-[64%]">
-      <ul id="tournaments" class="bg-white rounded-2xl shadow ring-1 ring-gray-100 divide-y">
-        <!-- SAMPLE ITEMS (edit/keep) -->
-        <li class="p-5" data-date="2025-03-29">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Mar 29–30, 2025</span>
-              <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
-                USSSA Spring Kickoff
-              </a>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Trussville, AL</div>
-          </div>
-        </li>
+        <!-- Make the list take more horizontal space -->
+        <div class="md:w-[62%] lg:w-[64%]">
+          <ul id="tournaments" class="bg-white text-gray-900 rounded-2xl shadow ring-1 ring-gray-100 divide-y">
+            <!-- SAMPLE ITEMS (edit/keep) -->
+            <li class="p-5" data-date="2025-03-29">
+              <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+                <div class="text-navy text-base md:text-lg font-semibold">
+                  <span class="text-gray-500 font-normal mr-2">Mar 29–30, 2025</span>
+                  <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
+                    USSSA Spring Kickoff
+                  </a>
+                </div>
+                <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Trussville, AL</div>
+              </div>
+            </li>
 
-        <li class="p-5" data-date="2025-09-20">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Sep 20–21, 2025</span>
-              <span>Falkville-Mountain</span>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Falkville-Mountain, AL</div>
-          </div>
-        </li>
+            <li class="p-5" data-date="2025-09-20">
+              <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+                <div class="text-navy text-base md:text-lg font-semibold">
+                  <span class="text-gray-500 font-normal mr-2">Sep 20–21, 2025</span>
+                  <span>Falkville-Mountain</span>
+                </div>
+                <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Falkville-Mountain, AL</div>
+              </div>
+            </li>
 
-        <li class="p-5" data-date="2025-10-04">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Oct 04–05, 2025</span>
-              <span>Priceville</span>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Priceville, AL</div>
-          </div>
-        </li>
+            <li class="p-5" data-date="2025-10-04">
+              <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+                <div class="text-navy text-base md:text-lg font-semibold">
+                  <span class="text-gray-500 font-normal mr-2">Oct 04–05, 2025</span>
+                  <span>Priceville</span>
+                </div>
+                <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Priceville, AL</div>
+              </div>
+            </li>
 
-        <li class="p-5" data-date="2025-10-18">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Oct 18–19, 2025</span>
-              <span>Lincoln</span>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Lincoln, AL</div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+            <li class="p-5" data-date="2025-10-18">
+              <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+                <div class="text-navy text-base md:text-lg font-semibold">
+                  <span class="text-gray-500 font-normal mr-2">Oct 18–19, 2025</span>
+                  <span>Lincoln</span>
+                </div>
+                <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Lincoln, AL</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-  <script>
-    // Auto-sort items by date so you don't have to reorder them manually.
-    document.addEventListener("DOMContentLoaded", () => {
-      const ul = document.getElementById("tournaments");
-      const items = Array.from(ul.querySelectorAll("li[data-date]"));
-      items.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
-      ul.innerHTML = "";
-      items.forEach(li => ul.appendChild(li));
-    });
-  </script>
-</section>
-</main>
+      <script>
+        // Auto-sort items by date so you don't have to reorder them manually.
+        document.addEventListener("DOMContentLoaded", () => {
+          const ul = document.getElementById("tournaments");
+          const items = Array.from(ul.querySelectorAll("li[data-date]"));
+          items.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+          ul.innerHTML = "";
+          items.forEach(li => ul.appendChild(li));
+        });
+      </script>
+    </section>
+  </main>
 
-
-
-  <footer class="bg-navy text-white mt-16">
+  <!-- Sticky footer -->
+  <footer class="bg-navy text-white mt-auto">
     <div class="max-w-6xl mx-auto px-4 py-8 grid gap-4 md:grid-cols-3">
       <div class="flex items-start gap-3">
-        <img src="monogram_ng.jpg" alt="NG Monogram" class="h-10 w-10 rounded ring-2 ring-skybolt" />
+        <img src="/assets/img/monogram_ng.jpg" alt="NG Monogram" class="h-10 w-10 rounded ring-2 ring-skybolt" />
         <div>
           <h4 class="font-semibold">Nitty Gritty Baseball</h4>
           <p class="text-sm opacity-90">We are a youth baseball organization located in Springville, Alabama.</p>
@@ -165,3 +164,4 @@
   </footer>
 </body>
 </html>
+
