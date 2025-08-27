@@ -59,21 +59,21 @@
   </nav>
 
   <main class="flex-1">
-    <!-- Tournaments with navy gradient background + right image -->
+ <!-- Tournaments with navy gradient background + right image -->
 <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white">
-  <!-- Right image panel (only on md+) -->
-  <div class="absolute inset-y-0 right-0 w-1/2 hidden md:block">
-    <img src="/assets/img/logo_alt.jpg" alt="" class="w-full h-full object-cover">
+  <!-- Right image panel (narrower so the list is wider) -->
+  <div class="absolute inset-y-0 right-0 w-[36%] hidden md:block">
+    <img src="logo_alt.jpg" alt="" class="w-full h-full object-cover">
     <!-- Dark fade left so list stays readable and blends with navy -->
     <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
   </div>
 
-  <!-- Content (reduced padding so it sits closer to the footer) -->
-  <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-10 md:pt-12 md:pb-12">
+  <!-- Content (reduced padding to close the gap) -->
+  <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-10">
     <h2 class="text-3xl font-extrabold mb-6">Tournaments</h2>
 
-    <!-- List takes most of the left side -->
-    <div class="md:w-[62%] lg:w-[64%]">
+    <!-- Make the list take more horizontal space -->
+    <div class="md:w-[68%] lg:w-[72%] xl:w-[74%]">
       <ul id="tournaments" class="bg-white text-gray-900 rounded-2xl shadow ring-1 ring-gray-100 divide-y">
         <!-- SAMPLE ITEMS (edit/keep) -->
         <li class="p-5" data-date="2025-03-29">
@@ -118,53 +118,6 @@
           </div>
         </li>
       </ul>
-
-      <!-- FILLER BAND: Support + Contact (keeps the page feeling full) -->
-      <div class="grid gap-6 md:grid-cols-2 mt-8">
-        <!-- Support -->
-        <div class="bg-white text-gray-900 rounded-2xl shadow p-6 ring-1 ring-skybolt/10">
-          <h3 class="text-xl font-bold text-navy">Support the Team</h3>
-          <p class="text-gray-600 mt-2">Donations help with field fees, gear, and tournaments.</p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <a href="https://venmo.com/u/NittyGrittyBaseball" target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center bg-gritred hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg">
-              Donate on Venmo
-              <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-            <button type="button"
-              onclick="navigator.clipboard?.writeText('@NittyGrittyBaseball')"
-              class="inline-flex items-center justify-center border border-navy/20 text-navy hover:bg-gray-50 font-semibold py-2 px-4 rounded-lg">
-              Copy Venmo: @NittyGrittyBaseball
-            </button>
-          </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="bg-white text-gray-900 rounded-2xl shadow p-6 ring-1 ring-skybolt/10">
-          <h3 class="text-xl font-bold text-navy">Questions?</h3>
-          <p class="text-gray-600 mt-2">Reach out about tryouts or tournaments.</p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <a href="mailto:nittygrittybaseball@gmail.com"
-               class="inline-flex items-center justify-center rounded-lg border-2 border-skybolt text-navy hover:bg-blue-50 font-semibold py-2 px-4">
-              Email Us
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61578006959179" target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center rounded-lg bg-skybolt hover:bg-skybolt/90 text-white font-semibold py-2 px-4">
-              Facebook
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Optional: small photo strip to add a bit more visual weight -->
-      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 opacity-90">
-        <img src="/assets/img/logo_hero.jpg"  alt="" class="w-full h-28 object-cover rounded-xl ring-1 ring-white/10">
-        <img src="/assets/img/monogram_ng.jpg" alt="" class="w-full h-28 object-cover rounded-xl ring-1 ring-white/10">
-        <img src="/assets/img/mascot_face.jpg" alt="" class="w-full h-28 object-cover rounded-xl ring-1 ring-white/10">
-        <img src="/assets/img/logo_alt.jpg"   alt="" class="w-full h-28 object-cover rounded-xl ring-1 ring-white/10">
-      </div>
     </div>
   </div>
 
@@ -179,6 +132,7 @@
     });
   </script>
 </section>
+    
   <!-- Sticky footer -->
   <footer class="bg-navy text-white mt-auto">
     <div class="max-w-6xl mx-auto px-4 py-8 grid gap-4 md:grid-cols-3">
