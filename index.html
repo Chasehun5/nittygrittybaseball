@@ -111,17 +111,92 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const slides = Array.from(document.querySelectorAll("[data-slide]"));
+    if (!slides.length) return;
+
     const dotsWrap = document.getElementById("heroDots");
-    let i = 0, timer;
-    function go(n){ slides[i].classList.replace("opacity-100","opacity-0"); i=(n+slides.length)%slides.length; slides[i].classList.replace("opacity-0","opacity-100"); updateDots(); }
-    function next(){ go(i+1); } function prev(){ go(i-1); }
-    function start(){ timer=setInterval(next,10000);} function stop(){ clearInterval(timer); }
-    function renderDots(){ dotsWrap.innerHTML=slides.map((_,idx)=>`<button class="w-2.5 h-2.5 rounded-full ${idx===i?'bg-white':'bg-white/50'} ring-1 ring-skybolt" data-dot="${idx}"></button>`).join(""); dotsWrap.addEventListener("click",e=>{const b=e.target.closest("[data-dot]"); if(b){stop(); go(parseInt(b.dataset.dot)); start();}}); }
-    function updateDots(){ dotsWrap.querySelectorAll("[data-dot]").forEach((b,idx)=>{ b.classList.toggle("bg-white", idx===i); b.classList.toggle("bg-white/50", idx!==i); }); }
-    document.getElementById("heroNext").addEventListener("click",()=>{stop(); next(); start();});
-    document.getElementById("heroPrev").addEventListener("click",()=>{stop(); prev(); start();});
-    const hero=document.getElementById("hero"); hero.addEventListener("mouseenter",stop); hero.addEventListener("mouseleave",start);
-    renderDots(); start();
+    const hero     = document.getElementById("hero");
+    const nextBtn  = document.getElementById("heroNext");
+    const prevBtn  = document.getElementById("heroPrev");
+
+    let i = 0;
+    let timer = null;                // <-- single source of truth
+    const INTERVAL = 10000;          // 10s
+    const FADE_MS  = 700;            // match your CSS transition duration
+    let transitioning = false;       // optional: avoid double-advance mid-fade
+
+    function setSlide(n) {
+      if (transitioning) return;     // optional guard
+      transitioning = true;
+
+      const current = slides[i];
+      current.classList.remove("opacity-100");
+      current.classList.add("opacity-0");
+
+      i = (n + slides.length) % slides.length;
+
+      const incoming = slides[i];
+      incoming.classList.remove("opacity-0");
+      incoming.classList.add("opacity-100");
+
+      updateDots();
+
+      // unlock after fade
+      setTimeout(() => { transitioning = false; }, FADE_MS);
+    }
+
+    const next = () => setSlide(i + 1);
+    const prev = () => setSlide(i - 1);
+
+    function start() {
+      if (timer) return;             // <-- don't stack intervals
+      timer = setInterval(next, INTERVAL);
+    }
+    function stop() {
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;                  // <-- important
+    }
+
+    function renderDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = slides
+        .map((_, idx) =>
+          `<button class="w-2.5 h-2.5 rounded-full ${idx===i?'bg-white':'bg-white/50'} ring-1 ring-skybolt" data-dot="${idx}"></button>`
+        ).join("");
+
+      dotsWrap.addEventListener("click", e => {
+        const b = e.target.closest("[data-dot]");
+        if (!b) return;
+        stop();
+        setSlide(parseInt(b.dataset.dot, 10));
+        start();
+      }, { passive: true });
+    }
+
+    function updateDots() {
+      if (!dotsWrap) return;
+      dotsWrap.querySelectorAll("[data-dot]").forEach((b, idx) => {
+        b.classList.toggle("bg-white", idx === i);
+        b.classList.toggle("bg-white/50", idx !== i);
+      });
+    }
+
+    // Controls
+    nextBtn?.addEventListener("click", () => { stop(); next(); start(); });
+    prevBtn?.addEventListener("click", () => { stop(); prev(); start(); });
+
+    // Pause on hover
+    hero?.addEventListener("mouseenter", stop);
+    hero?.addEventListener("mouseleave", start);
+
+    // Pause when tab not visible
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop(); else start();
+    });
+
+    // Init
+    renderDots();
+    start();
   });
 </script>
 
