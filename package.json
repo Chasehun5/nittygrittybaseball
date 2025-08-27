@@ -1,0 +1,19 @@
+{
+  "name": "nitty-gritty-baseball-site",
+  "version": "1.0.0",
+  "description": "A simple, responsive multi-page site for a small baseball team. Built with HTML + Tailwind (CDN) so you can edit text/images and deploy fast.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  }
+}

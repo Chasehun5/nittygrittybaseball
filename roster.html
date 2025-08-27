@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitty Gritty Baseball — Roster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#0B2A5F",
+            navydark: "#081c47",
+            gritred: "#E53935",
+            skybolt: "#36A9E1"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-navy text-white shadow-md">
+    <div class="px-4 lg:px-6 w-full lg:max-w-none lg:mx-0">
+      <div class="flex justify-between">
+        <div class="flex space-x-4 items-center">
+          <a href="index.html" class="flex items-center py-4 px-2 gap-3">
+            <img src="assets/img/monogram_ng.jpg" alt="NG" class="h-8 w-8 rounded ring-2 ring-skybolt" />
+            <span class="font-extrabold tracking-wide text-xl">Nitty Gritty Baseball</span>
+          </a>
+          <!-- Primary Nav -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="schedule.html" class="py-5 px-3 hover:text-skybolt">Tournaments</a>
+            <a href="roster.html" class="py-5 px-3 hover:text-skybolt">Roster</a>
+            <a href="gallery.html" class="py-5 px-3 hover:text-skybolt">Gallery</a>
+          </div>
+        </div>
+        <!-- Mobile button -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button p-2 focus:outline-none focus:ring-2 focus:ring-skybolt rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu hidden md:hidden bg-navydark">
+      <a href="schedule.html" class="block py-2 px-4 text-sm hover:bg-navy">Tournaments</a>
+      <a href="roster.html" class="block py-2 px-4 text-sm hover:bg-navy">Roster</a>
+      <a href="gallery.html" class="block py-2 px-4 text-sm hover:bg-navy">Gallery</a>
+    </div>
+  </nav>
+
+  <!-- ROSTER (one combined section; navy background outside the lists) -->
+<section class="bg-gray-100 text-navy">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-extrabold mb-6">Roster</h2>
+
+    <!-- COACHES (light gray list) -->
+    <div class="mb-8">
+      <h3 class="text-xl font-bold mb-3">Coaches</h3>
+      <ul class="bg-gray-50 text-gray-900 rounded-2xl shadow divide-y ring-1 ring-gray-100">
+        <!-- Coach row (copy to add more) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">HC</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Chad Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">Head Coach</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-gray-500 text-sm">add phone # here</div>
+          </div>
+        </li>
+
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">AC</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Renee Carter
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">Assistant Coach</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-gray-500 text-sm">add phone # here</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PLAYERS (white list) -->
+    <div>
+      <h3 class="text-xl font-bold mb-3">Players</h3>
+      <ul class="bg-white text-gray-900 rounded-2xl shadow divide-y ring-1 ring-gray-100">
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+        <!-- Player row (copy to add more players) -->
+        <li class="p-4 md:p-5">
+          <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
+              <div>
+                <div class="text-lg font-semibold text-navy">
+                  Griffin Blevins
+                  <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
+                </div>
+                <div class="text-gray-600 text-sm mt-0.5">
+                  B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
+                </div>
+              </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="bg-navy text-white mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid gap-4 md:grid-cols-3">
+      <div class="flex items-start gap-3">
+        <img src="assets/img/monogram_ng.jpg" alt="NG Monogram" class="h-10 w-10 rounded ring-2 ring-skybolt" />
+        <div>
+          <h4 class="font-semibold">Nitty Gritty Baseball</h4>
+          <p class="text-sm opacity-90">We are a youth baseball organization located in Springville, Alabama.</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold">Quick Links</h4>
+        <ul class="text-sm space-y-1">
+          <li><a class="hover:underline" href="schedule.html">Schedule</a></li>
+          <li><a class="hover:underline" href="roster.html">Roster</a></li>
+          <li><a class="hover:underline" href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold">Contact</h4>
+        <p class="text-sm"><a class="underline decoration-skybolt" href="mailto:nittygrittybaseball@gmail.com">nittygrittybaseball@gmail.com</a></p>
+        <h4 class="font-semibold">Venmo</h4>
+        <p class="text-sm opacity-100">@NittyGrittyBaseball</p>
+      </div>
+    </div>
+    <div class="text-center text-xs py-3 bg-navydark">&copy; 2025 Nitty Gritty Baseball.</div>
+  </footer>
+</body>
+</html>

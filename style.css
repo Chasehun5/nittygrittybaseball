@@ -1,0 +1,11 @@
+
+/* Custom tweaks (Tailwind handles most styling) */
+html, body { scroll-behavior: smooth; }
+
+
+:root {
+  --navy: #0B2A5F;
+  --red: #E53935;
+  --skybolt: #36A9E1;
+}
+html, body { scroll-behavior: smooth; }
