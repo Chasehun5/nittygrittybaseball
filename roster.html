@@ -57,47 +57,125 @@
 
 <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white min-h-full flex-1">
   <!-- Right image panel (slightly narrower so the list area is wider) -->
-  <div class="absolute inset-y-0 right-0 w-[30%] hidden md:block">
+  <div class="absolute inset-y-0 right-0 w-[28%] hidden md:block">
     <img src="nittygrittylogo.jpg" alt="Nitty Gritty logo" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
   </div>
 
-  <!-- Left content: single card that fills the space beside the image -->
+  <!-- Left content: one big card filling the space beside the image -->
   <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-12">
-    <div class="md:w-[70%] lg:w-[72%] xl:w-[74%]">
+    <div class="md:w-[72%] lg:w-[74%] xl:w-[76%]">
       <div class="bg-white text-navy rounded-2xl shadow-xl ring-1 ring-navy/10 p-6 md:p-8">
-        <h2 class="text-3xl font-extrabold mb-5">Roster</h2>
+        <h2 class="text-3xl font-extrabold mb-6">Roster</h2>
 
-        <!-- Coaches (one-per-line, no boxes) -->
-        <h3 class="text-xl font-bold mb-2">Coaches</h3>
-        <ul class="list-disc list-inside space-y-1.5 text-base md:text-lg leading-relaxed mb-6">
-          <li>Chad Blevins <span class="text-gritred">(C)</span></li>
-          <li>Tim Glover <span class="text-gritred">(C)</span></li>
-          <li>Mike Keene <span class="text-gritred">(C)</span></li>
-          <li>David Ryan <span class="text-gritred">(C)</span></li>
+        <!-- COACHES: Name | Affiliation -->
+        <h3 class="text-xl font-bold mb-3">Coaches</h3>
+
+        <!-- Column labels -->
+        <div class="hidden md:grid grid-cols-[1fr_auto] text-xs font-semibold uppercase tracking-wide text-navydark/70 bg-navy/5 rounded-lg">
+          <div class="py-2 pl-3">Name</div>
+          <div class="py-2 pr-3 text-right">Affiliation</div>
+        </div>
+
+        <!-- Rows -->
+        <ul class="divide-y divide-navy/10">
+          <li class="grid grid-cols-[1fr_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Chad Blevins</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-gritred font-semibold text-right">C</div>
+          </li>
+          <li class="grid grid-cols-[1fr_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Tim Glover</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-gritred font-semibold text-right">C</div>
+          </li>
+          <li class="grid grid-cols-[1fr_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Mike Keene</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-gritred font-semibold text-right">C</div>
+          </li>
+          <li class="grid grid-cols-[1fr_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">David Ryan</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-gritred font-semibold text-right">C</div>
+          </li>
         </ul>
 
-        <hr class="border-navy/10 my-4">
+        <hr class="border-navy/10 my-6">
 
-        <!-- Players (single column, top-to-bottom) -->
-        <h3 class="text-xl font-bold mb-2">Players</h3>
-        <!-- Add positions later like: Griffin Blevins (33) — C/1B -->
-        <ul class="list-disc list-inside space-y-1.5 text-base md:text-lg leading-relaxed">
-          <li>Griffin Blevins <span class="text-gritred">(33)</span></li>
-          <li>JP Glover <span class="text-gritred">(16)</span></li>
-          <li>Aidan Gosset <span class="text-gritred">(22)</span></li>
-          <li>James Edward Hill <span class="text-gritred">(14)</span></li>
-          <li>Asher Keene <span class="text-gritred">(47)</span></li>
-          <li>Carson McClure <span class="text-gritred">(23)</span></li>
-          <li>Owen Pilkinton <span class="text-gritred">(13)</span></li>
-          <li>Landen Roper <span class="text-gritred">(8)</span></li>
-          <li>Jack Ryan <span class="text-gritred">(15)</span></li>
-          <li>Braxton Sharp <span class="text-gritred">(5)</span></li>
+        <!-- PLAYERS: Name | # | Position -->
+        <h3 class="text-xl font-bold mb-3">Players</h3>
+
+        <!-- Column labels -->
+        <div class="hidden md:grid grid-cols-[1fr_auto_auto] text-xs font-semibold uppercase tracking-wide text-navydark/70 bg-navy/5 rounded-lg">
+          <div class="py-2 pl-3">Name</div>
+          <div class="py-2 text-center">#</div>
+          <div class="py-2 pr-3 text-right">Position</div>
+        </div>
+
+        <!-- Rows -->
+        <ul class="divide-y divide-navy/10">
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Griffin Blevins</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">33</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">JP Glover</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">16</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Aidan Gosset</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">22</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">James Edward Hill</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">14</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Asher Keene</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">47</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Carson McClure</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">23</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Owen Pilkinton</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">13</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Landen Roper</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">8</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Jack Ryan</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">15</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
+
+          <li class="grid grid-cols-[1fr_auto_auto] items-center py-2.5 md:py-3">
+            <div class="pl-0 md:pl-3 text-base md:text-lg font-medium">Braxton Sharp</div>
+            <div class="text-sm md:text-base font-semibold text-gritred text-center">5</div>
+            <div class="pr-0 md:pr-3 text-sm md:text-base text-navydark/70 text-right">—</div>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
 
   <!-- Sticky footer -->
   <footer class="bg-navy text-white mt-auto">
