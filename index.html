@@ -210,83 +210,20 @@
     });
   </script>
 
-<!-- FUNDRAISING: Donate + Contact (left) and Raffle (right) -->
+<!-- FUNDRAISING: Raffle (left) + Donate & Contact stacked (right) -->
 <section id="fundraising" class="relative mt-16 md:mt-20">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+    <!-- 3 cols, 2 rows on md+ so right column cards are half the raffle height -->
+    <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 items-stretch">
 
-      <!-- LEFT COLUMN: Donate + Contact stacked -->
-      <div class="order-2 md:order-1 space-y-6">
-        <!-- DONATE -->
-        <article id="donate" class="bg-white rounded-xl shadow ring-1 ring-skybolt/10 p-6 md:p-8 flex flex-col items-center text-center h-full">
-          <div class="inline-flex items-center gap-2 text-skybolt font-semibold text-sm">
-            <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.7-4.1-9.4-8.6C.36 9.22 2.6 5 6.5 5c2.1 0 3.6 1.04 4.5 2.17C11.9 6.04 13.4 5 15.5 5 19.4 5 21.6 9.22 21.4 12.4 18.7 16.9 12 21 12 21z"/></svg>
-            Thanks for supporting Nitty Gritty Baseball
-          </div>
-          <h2 class="text-2xl font-extrabold text-navy mt-1">Make a Donation</h2>
-          <p class="mt-2 text-gray-600 max-w-prose">Your gift helps with field fees, uniforms, equipment, and tournaments—thank you!</p>
-
-          <div class="mt-3 flex flex-wrap justify-center gap-2 text-[11px]">
-            <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Uniforms</span>
-            <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Tournament Fees</span>
-            <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Field Time</span>
-            <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Training Gear</span>
-          </div>
-
-          <div class="mt-4 flex flex-wrap justify-center gap-3">
-            <button type="button"
-              onclick="navigator.clipboard?.writeText('@NittyGrittyBaseball')"
-              class="flex-none inline-flex items-center justify-center border border-skybolt text-navy hover:bg-blue-50 font-semibold py-2 px-4 rounded-lg">
-              Copy Venmo: @NittyGrittyBaseball
-            </button>
-            <a href="https://venmo.com/u/NittyGrittyBaseball" target="_blank" rel="noopener"
-              class="flex-none inline-flex items-center justify-center bg-gritred hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg">
-              Donate on Venmo
-              <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-
-          <p class="mt-4 text-xs text-gray-500">@NittyGrittyBaseball</p>
-        </article>
-
-        <!-- CONTACT -->
-        <article id="contact" class="bg-white rounded-xl shadow ring-1 ring-gray-100 p-6 md:p-8 flex flex-col items-center text-center h-full">
-          <div class="inline-flex items-center gap-2 text-skybolt font-semibold text-sm">
-            <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M2 5a2 2 0 012-2h16a2 2 0 012 2v.35l-9.38 6.02a3 3 0 01-3.24 0L2 5.35V5zM2 8.24l7.24 4.65a5 5 0 005.52 0L22 8.24V19a2 2 0 01-2 2H4a2 2 0 01-2-2V8.24z"/></svg>
-            We’d love to hear from you
-          </div>
-          <h2 class="text-2xl font-extrabold text-navy mt-1">Contact</h2>
-          <p class="mt-2 text-gray-600 max-w-prose">Questions about tryouts, tournaments, or supporting the team? Reach out any time.</p>
-
-          <a href="mailto:nittygrittybaseball@gmail.com"
-             class="flex-none inline-flex items-center justify-center border border-skybolt text-navy hover:bg-blue-50 font-semibold px-4 py-2 rounded-lg">
-            <span class="break-words">nittygrittybaseball@gmail.com</span>
-          </a>
-          <button type="button" class="mt-2 text-xs underline text-skybolt"
-                  onclick="navigator.clipboard?.writeText('nittygrittybaseball@gmail.com')">
-            Copy email
-          </button>
-
-          <a href="https://www.facebook.com/profile.php?id=61578006959179" target="_blank" rel="noopener"
-             class="mt-4 inline-flex items-center justify-center rounded-lg bg-skybolt hover:bg-skybolt/90 text-white font-semibold px-4 py-2">
-            Visit Facebook
-            <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </article>
-      </div>
-
-      <!-- RIGHT COLUMN: Raffle (spans two columns on md+) -->
-      <article id="raffle" class="order-1 md:order-2 md:col-span-2 rounded-2xl bg-white shadow ring-1 ring-gray-100 overflow-hidden">
+      <!-- RAFFLE (LEFT) — spans two columns & two rows -->
+      <article id="raffle"
+               class="order-1 md:col-span-2 md:row-span-2 rounded-2xl bg-white shadow ring-1 ring-gray-100 overflow-hidden h-full">
         <div class="grid md:grid-cols-2 gap-0 h-full">
           <!-- Flyer image -->
           <div class="relative">
             <img src="raffle_ng.jpeg" alt="Nitty Gritty Baseball — Raffle flyer" class="w-full h-full object-cover">
           </div>
-
           <!-- Text / CTA -->
           <div class="p-6 md:p-8 flex flex-col justify-center">
             <span class="inline-flex items-center gap-2 text-skybolt font-semibold text-sm">
@@ -296,7 +233,7 @@
             <h2 class="text-2xl md:text-3xl font-extrabold text-navy mt-1">Team Raffle — Now Live</h2>
 
             <p class="mt-2 text-gray-700">
-              Support Nitty Gritty Baseball and enter to win one of three prizes! Details below.
+              Support Nitty Gritty Baseball and enter to win one of three prizes!
             </p>
 
             <div class="mt-4">
@@ -322,12 +259,10 @@
                  class="inline-flex items-center justify-center rounded-lg border border-skybolt text-navy hover:bg-blue-50 font-semibold px-4 py-2">
                 Email Us
               </a>
-
               <a href="https://www.facebook.com/profile.php?id=61578006959179" target="_blank" rel="noopener"
                  class="inline-flex items-center justify-center rounded-lg bg-skybolt hover:bg-skybolt/90 text-white font-semibold px-4 py-2">
                 Message on Facebook
               </a>
-
               <a href="raffle_ng.jpeg" target="_blank" rel="noopener"
                  class="inline-flex items-center justify-center rounded-lg bg-navy hover:bg-navydark text-white font-semibold px-4 py-2">
                 Open Flyer
@@ -341,7 +276,69 @@
           </div>
         </div>
       </article>
-      <!-- /RIGHT COLUMN -->
+
+      <!-- DONATE (TOP-RIGHT) -->
+      <article id="donate"
+               class="order-2 md:col-start-3 md:row-start-1 bg-white rounded-xl shadow ring-1 ring-skybolt/10 p-6 md:p-8 flex flex-col items-center text-center h-full">
+        <div class="inline-flex items-center gap-2 text-skybolt font-semibold text-sm">
+          <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.7-4.1-9.4-8.6C.36 9.22 2.6 5 6.5 5c2.1 0 3.6 1.04 4.5 2.17C11.9 6.04 13.4 5 15.5 5 19.4 5 21.6 9.22 21.4 12.4 18.7 16.9 12 21 12 21z"/></svg>
+          Thanks for supporting Nitty Gritty Baseball
+        </div>
+        <h2 class="text-2xl font-extrabold text-navy mt-1">Make a Donation</h2>
+        <p class="mt-2 text-gray-600 max-w-prose">Your gift helps with field fees, uniforms, equipment, and tournaments—thank you!</p>
+
+        <div class="mt-3 flex flex-wrap justify-center gap-2 text-[11px]">
+          <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Uniforms</span>
+          <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Tournament Fees</span>
+          <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Field Time</span>
+          <span class="px-2 py-1 rounded-full bg-skybolt/10 text-skybolt font-semibold">Training Gear</span>
+        </div>
+
+        <div class="mt-4 flex flex-wrap justify-center gap-3">
+          <button type="button"
+                  onclick="navigator.clipboard?.writeText('@NittyGrittyBaseball')"
+                  class="flex-none inline-flex items-center justify-center border border-skybolt text-navy hover:bg-blue-50 font-semibold py-2 px-4 rounded-lg">
+            Copy Venmo: @NittyGrittyBaseball
+          </button>
+          <a href="https://venmo.com/u/NittyGrittyBaseball" target="_blank" rel="noopener"
+             class="flex-none inline-flex items-center justify-center bg-gritred hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg">
+            Donate on Venmo
+            <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="mt-4 text-xs text-gray-500">@NittyGrittyBaseball</p>
+      </article>
+
+      <!-- CONTACT (BOTTOM-RIGHT) -->
+      <article id="contact"
+               class="order-3 md:col-start-3 md:row-start-2 bg-white rounded-xl shadow ring-1 ring-gray-100 p-6 md:p-8 flex flex-col items-center text-center h-full">
+        <div class="inline-flex items-center gap-2 text-skybolt font-semibold text-sm">
+          <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M2 5a2 2 0 012-2h16a2 2 0 012 2v.35l-9.38 6.02a3 3 0 01-3.24 0L2 5.35V5zM2 8.24l7.24 4.65a5 5 0 005.52 0L22 8.24V19a2 2 0 01-2 2H4a2 2 0 01-2-2V8.24z"/></svg>
+          We’d love to hear from you
+        </div>
+        <h2 class="text-2xl font-extrabold text-navy mt-1">Contact</h2>
+        <p class="mt-2 text-gray-600 max-w-prose">Questions about tryouts, tournaments, or supporting the team? Reach out any time.</p>
+
+        <a href="mailto:nittygrittybaseball@gmail.com"
+           class="flex-none inline-flex items-center justify-center border border-skybolt text-navy hover:bg-blue-50 font-semibold px-4 py-2 rounded-lg">
+          <span class="break-words">nittygrittybaseball@gmail.com</span>
+        </a>
+        <button type="button" class="mt-2 text-xs underline text-skybolt"
+                onclick="navigator.clipboard?.writeText('nittygrittybaseball@gmail.com')">
+          Copy email
+        </button>
+
+        <a href="https://www.facebook.com/profile.php?id=61578006959179" target="_blank" rel="noopener"
+           class="mt-4 inline-flex items-center justify-center rounded-lg bg-skybolt hover:bg-skybolt/90 text-white font-semibold px-4 py-2">
+          Visit Facebook
+          <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
 
     </div>
   </div>
