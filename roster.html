@@ -55,66 +55,39 @@
     </div>
   </nav>
 
-  <main class="flex-1 flex flex-col">
-    <!-- Roster with navy gradient + right image -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-navy via-white to-navy text-white min-h-full flex-1">
-      <!-- Right image panel (matches tournaments) -->
-      <div class="absolute inset-y-0 right-0 w-[35%] hidden md:block">
-        <img src="nittygrittylogo.jpg" alt="" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
-      </div>
+  <!-- Slim, unboxed lists (uniform color) -->
+<div class="md:w-[60%] lg:w-[65%] xl:w-[65%] space-y-8">
 
-      <!-- Left content -->
-      <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-10">
-        <h2 class="text-3xl font-extrabold mb-6">Roster</h2>
+  <!-- Coaches -->
+  <div>
+    <h3 class="text-xl font-bold mb-3">Coaches</h3>
+    <ul class="list-none space-y-1">
+      <li class="py-1.5 text-base md:text-lg text-white">Chad Blevins (C)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Tim Glover (C)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Mike Keene (C)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">David Ryan (C)</li>
+    </ul>
+  </div>
 
-        <!-- Narrower, lighter lists (less blocky) -->
-        <div class="md:w-[60%] lg:w-[65%] xl:w-[65%] space-y-8">
+  <!-- Players -->
+  <div>
+    <h3 class="text-xl font-bold mb-3">Players</h3>
+    <!-- single column on mobile; two columns on md+ -->
+    <ul class="list-none grid grid-cols-1 md:grid-cols-2 gap-y-1.5 md:gap-y-2 md:gap-x-8">
+      <li class="py-1.5 text-base md:text-lg text-white">Griffin Blevins (33)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">JP Glover (16)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Aidan Gosset (22)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">James Edward Hill (14)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Asher Keene (47)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Carson McClure (23)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Owen Pilkinton (13)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Landen Roper (8)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Jack Ryan (15)</li>
+      <li class="py-1.5 text-base md:text-lg text-white">Braxton Sharp (5)</li>
+    </ul>
+  </div>
 
-          <!-- Coaches -->
-          <div>
-            <h3 class="text-xl font-bold mb-3">Coaches</h3>
-            <ul class="rounded-xl bg-white/5 ring-1 ring-white/10 divide-y divide-white/10">
-              <!-- slim rows -->
-              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
-                <span>Chad Blevins <span class="text-gritred/70">(C)</span></span>
-              </li>
-              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
-                <span>Tim Glover <span class="text-gritred/70">(C)</span></span>
-              </li>
-              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
-                <span>Mike Keene <span class="text-gritred/70">(C)</span></span>
-              </li>
-              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
-                <span>David Ryan <span class="text-gritred/70">(C)</span></span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Players (simple two-column list, names with numbers in parentheses) -->
-          <div>
-            <h3 class="text-xl font-bold mb-3">Players</h3>
-
-            <!-- Mobile: single column; md+: two columns; light background, no heavy boxes -->
-            <ul class="rounded-xl bg-white/5 ring-1 ring-white/10 p-2 md:p-3 grid grid-cols-1 md:grid-cols-2 gap-y-1.5 md:gap-y-2 md:gap-x-6">
-              <li class="px-2 py-2 text-base md:text-lg">Griffin Blevins <span class="text-gritred/70">#33</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">JP Glover <span class="text-gritred/70">#16</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">Aidan Gosset <span class="text-gritred/70">#22</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">James Edward Hill <span class="text-gritred/70">#14</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">Asher Keene <span class="text-gritred/70">#47</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">Carson McClure <span class="text-gritred/70">#23</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">Owen Pilkinton <span class="text-gritred/70">#13</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">Landen Roper <span class="text-gritred/70">#8</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">Jack Ryan <span class="text-gritred/70">#15</span></li>
-              <li class="px-2 py-2 text-base md:text-lg">Braxton Sharp <span class="text-gritred/70">#5</span></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  </main>
-
+</div>
   <!-- Sticky footer -->
   <footer class="bg-navy text-white mt-auto">
     <div class="max-w-6xl mx-auto px-4 py-8 grid gap-4 md:grid-cols-3">
