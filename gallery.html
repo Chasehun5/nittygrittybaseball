@@ -72,57 +72,78 @@
           </div>
         </div>
 
-        <!-- Gallery grid -->
-        <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <!-- Use buttons for accessibility + easy JS lightbox trigger -->
-          <button data-lightbox data-src="logo_hero.jpg"
-                  class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
-            <img src="logo_hero.jpg" alt="Logo 1"
-                 class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
-            <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
-          </button>
+        <!-- NEW: practice & cover photos -->
+        <button data-lightbox data-src="ng_coverpic.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="ng_coverpic.jpeg" loading="lazy" alt="Nitty Gritty cover collage"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic1.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic1.jpeg" loading="lazy" alt="Bullpen work"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic2.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic2.jpeg" loading="lazy" alt="Indoor hitting drill"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic3.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic3.jpeg" loading="lazy" alt="Receiving/catching work"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic4.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic4.jpeg" loading="lazy" alt="Pitching mechanics"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic5.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic5.jpeg" loading="lazy" alt="Catcher setup"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic6.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic6.jpeg" loading="lazy" alt="Game action — catchers"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic7.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic7.jpeg" loading="lazy" alt="Indoor hitting — tee work"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <button data-lightbox data-src="practice_pic8.jpeg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="practice_pic8.jpeg" loading="lazy" alt="Pitching off the mound"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
+        
+        <!-- keep your existing collage too -->
+        <button data-lightbox data-src="ng_collage.jpg"
+                class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
+          <img src="ng_collage.jpg" loading="lazy" alt="Team collage"
+               class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
+          <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
+        </button>
 
-          <button data-lightbox data-src="monogram_ng.jpg"
-                  class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
-            <img src="monogram_ng.jpg" alt="Monogram"
-                 class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
-            <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
-          </button>
-
-          <button data-lightbox data-src="mascot_face.jpg"
-                  class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
-            <img src="mascot_face.jpg" alt="Mascot"
-                 class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
-            <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
-          </button>
-
-          <button data-lightbox data-src="logo_alt.jpg"
-                  class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
-            <img src="logo_alt.jpg" alt="Alt Logo"
-                 class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
-            <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
-          </button>
-
-          <button data-lightbox data-src="ng_collage.jpg"
-                  class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
-            <img src="ng_collage.jpg" alt="collage"
-                 class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
-            <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
-          </button>
-
-          <button data-lightbox data-src="nittygritty_plain.jpg"
-                  class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
-            <img src="nittygritty_plain.jpg" alt="plain"
-                 class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
-            <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
-          </button>
-
-          <button data-lightbox data-src="team_pic_1.jpg"
-                  class="group relative bg-white rounded-2xl shadow overflow-hidden ring-1 ring-gray-200">
-            <img src="team_pic_1.jpg" alt="Team Pic 1"
-                 class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105" />
-            <span class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></span>
-          </button>
         </div>
       </div>
     </section>
