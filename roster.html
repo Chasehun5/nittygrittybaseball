@@ -56,42 +56,43 @@
   </nav>
 
 <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white min-h-full flex-1">
-  <!-- Right image panel (kept) -->
-  <div class="absolute inset-y-0 right-0 w-[35%] hidden md:block">
+  <!-- Right image panel (slightly narrower so the list area is wider) -->
+  <div class="absolute inset-y-0 right-0 w-[30%] hidden md:block">
     <img src="nittygrittylogo.jpg" alt="Nitty Gritty logo" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
   </div>
 
-  <!-- Left content in one big card -->
+  <!-- Left content: single card that fills the space beside the image -->
   <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-12">
-    <div class="md:w-[70%] lg:w-[70%] xl:w-[70%]">
+    <div class="md:w-[70%] lg:w-[72%] xl:w-[74%]">
       <div class="bg-white text-navy rounded-2xl shadow-xl ring-1 ring-navy/10 p-6 md:p-8">
-        <h2 class="text-3xl font-extrabold mb-4">Roster</h2>
+        <h2 class="text-3xl font-extrabold mb-5">Roster</h2>
 
-        <!-- Coaches -->
+        <!-- Coaches (one-per-line, no boxes) -->
         <h3 class="text-xl font-bold mb-2">Coaches</h3>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6 mb-6">
-          <li class="text-base md:text-lg">Chad Blevins <span class="text-gritred">(C)</span></li>
-          <li class="text-base md:text-lg">Tim Glover <span class="text-gritred">(C)</span></li>
-          <li class="text-base md:text-lg">Mike Keene <span class="text-gritred">(C)</span></li>
-          <li class="text-base md:text-lg">David Ryan <span class="text-gritred">(C)</span></li>
+        <ul class="list-disc list-inside space-y-1.5 text-base md:text-lg leading-relaxed mb-6">
+          <li>Chad Blevins <span class="text-gritred">(C)</span></li>
+          <li>Tim Glover <span class="text-gritred">(C)</span></li>
+          <li>Mike Keene <span class="text-gritred">(C)</span></li>
+          <li>David Ryan <span class="text-gritred">(C)</span></li>
         </ul>
 
         <hr class="border-navy/10 my-4">
 
-        <!-- Players -->
+        <!-- Players (single column, top-to-bottom) -->
         <h3 class="text-xl font-bold mb-2">Players</h3>
-        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-6">
-          <li class="text-base md:text-lg">Griffin Blevins <span class="text-gritred">(33)</span></li>
-          <li class="text-base md:text-lg">JP Glover <span class="text-gritred">(16)</span></li>
-          <li class="text-base md:text-lg">Aidan Gosset <span class="text-gritred">(22)</span></li>
-          <li class="text-base md:text-lg">James Edward Hill <span class="text-gritred">(14)</span></li>
-          <li class="text-base md:text-lg">Asher Keene <span class="text-gritred">(47)</span></li>
-          <li class="text-base md:text-lg">Carson McClure <span class="text-gritred">(23)</span></li>
-          <li class="text-base md:text-lg">Owen Pilkinton <span class="text-gritred">(13)</span></li>
-          <li class="text-base md:text-lg">Landen Roper <span class="text-gritred">(8)</span></li>
-          <li class="text-base md:text-lg">Jack Ryan <span class="text-gritred">(15)</span></li>
-          <li class="text-base md:text-lg">Braxton Sharp <span class="text-gritred">(5)</span></li>
+        <!-- Add positions later like: Griffin Blevins (33) — C/1B -->
+        <ul class="list-disc list-inside space-y-1.5 text-base md:text-lg leading-relaxed">
+          <li>Griffin Blevins <span class="text-gritred">(33)</span></li>
+          <li>JP Glover <span class="text-gritred">(16)</span></li>
+          <li>Aidan Gosset <span class="text-gritred">(22)</span></li>
+          <li>James Edward Hill <span class="text-gritred">(14)</span></li>
+          <li>Asher Keene <span class="text-gritred">(47)</span></li>
+          <li>Carson McClure <span class="text-gritred">(23)</span></li>
+          <li>Owen Pilkinton <span class="text-gritred">(13)</span></li>
+          <li>Landen Roper <span class="text-gritred">(8)</span></li>
+          <li>Jack Ryan <span class="text-gritred">(15)</span></li>
+          <li>Braxton Sharp <span class="text-gritred">(5)</span></li>
         </ul>
       </div>
     </div>
