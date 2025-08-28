@@ -58,7 +58,7 @@
   <main class="flex-1 flex flex-col">
     <!-- Roster with navy gradient + right image -->
     <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white min-h-full flex-1">
-      <!-- Right image panel (like tournaments) -->
+      <!-- Right image panel (matches tournaments) -->
       <div class="absolute inset-y-0 right-0 w-[35%] hidden md:block">
         <img src="nittygrittylogo.jpg" alt="" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
@@ -68,115 +68,48 @@
       <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-10">
         <h2 class="text-3xl font-extrabold mb-6">Roster</h2>
 
-        <!-- Make content wide on the left (mirrors tournaments layout) -->
-        <div class="md:w-[60%] lg:w-[65%] xl:w-[65%]">
-          <!-- COACHES -->
-          <div class="mb-8">
-            <h3 class="text-xl font-bold mb-3">Coaches</h3>
-            <ul class="bg-gray-50 text-gray-900 rounded-2xl shadow divide-y ring-1 ring-gray-100">
-              <li class="p-4 md:p-5">
-                <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
-                  <div class="flex items-start gap-4">
-                    <img src="monogram_ng.jpg" alt="Coach headshot"
-                         class="h-14 w-14 rounded-xl object-cover ring-2 ring-skybolt/30 bg-white"/>
-                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">HC</span>
-                    <div>
-                      <div class="text-lg font-semibold text-navy">
-                        Chad Blevins
-                        <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">Head Coach</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="text-gray-500 text-sm">add phone # here</div>
-                </div>
-              </li>
+        <!-- Narrower, lighter lists (less blocky) -->
+        <div class="md:w-[60%] lg:w-[65%] xl:w-[65%] space-y-8">
 
-              <li class="p-4 md:p-5">
-                <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
-                  <div class="flex items-start gap-4">
-                    <img src="monogram_ng.jpg" alt="Coach headshot"
-                         class="h-14 w-14 rounded-xl object-cover ring-2 ring-skybolt/30 bg-white"/>
-                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">AC</span>
-                    <div>
-                      <div class="text-lg font-semibold text-navy">
-                        Renee Carter
-                        <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">Assistant Coach</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="text-gray-500 text-sm">add phone # here</div>
-                </div>
+          <!-- Coaches -->
+          <div>
+            <h3 class="text-xl font-bold mb-3">Coaches</h3>
+            <ul class="rounded-xl bg-white/5 ring-1 ring-white/10 divide-y divide-white/10">
+              <!-- slim rows -->
+              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
+                <span>Chad Blevins <span class="text-white/70">(C)</span></span>
+              </li>
+              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
+                <span>Tim Glover <span class="text-white/70">(C)</span></span>
+              </li>
+              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
+                <span>Mike Keene <span class="text-white/70">(C)</span></span>
+              </li>
+              <li class="px-3 md:px-4 py-2.5 text-base md:text-lg flex items-center justify-between">
+                <span>David Ryan <span class="text-white/70">(C)</span></span>
               </li>
             </ul>
           </div>
 
-          <!-- PLAYERS -->
+          <!-- Players (simple two-column list, names with numbers in parentheses) -->
           <div>
             <h3 class="text-xl font-bold mb-3">Players</h3>
-            <ul class="bg-white text-gray-900 rounded-2xl shadow divide-y ring-1 ring-gray-100">
-              <!-- Player 1 -->
-              <li class="p-4 md:p-5">
-                <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
-                  <div class="flex items-start gap-4">
-                    <img src="monogram_ng.jpg" alt="Player headshot"
-                         class="h-14 w-14 rounded-xl object-cover ring-2 ring-skybolt/30 bg-white"/>
-                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">33</span>
-                    <div>
-                      <div class="text-lg font-semibold text-navy">
-                        Griffin Blevins
-                        <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">C/1B</span>
-                      </div>
-                      <div class="text-gray-600 text-sm mt-0.5">
-                        B/T: R/R <span class="text-gray-400">•</span> 4'11" <span class="text-gray-400">•</span> 80lbs
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
 
-              <!-- Sample player 2 -->
-              <li class="p-4 md:p-5">
-                <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
-                  <div class="flex items-start gap-4">
-                    <img src="monogram_ng.jpg" alt="Player headshot"
-                         class="h-14 w-14 rounded-xl object-cover ring-2 ring-skybolt/30 bg-white"/>
-                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">12</span>
-                    <div>
-                      <div class="text-lg font-semibold text-navy">
-                        Sample Player
-                        <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">SS/P</span>
-                      </div>
-                      <div class="text-gray-600 text-sm mt-0.5">
-                        B/T: R/R <span class="text-gray-400">•</span> 5'0" <span class="text-gray-400">•</span> 85lbs
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <!-- TEMPLATE (copy/paste) -->
-              <!--
-              <li class="p-4 md:p-5">
-                <div class="flex items-start md:items-center justify-between gap-4 flex-col md:flex-row">
-                  <div class="flex items-start gap-4">
-                    <img src="monogram_ng.jpg" alt="Player headshot"
-                         class="h-14 w-14 rounded-xl object-cover ring-2 ring-skybolt/30 bg-white"/>
-                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy text-white font-bold shrink-0">NN</span>
-                    <div>
-                      <div class="text-lg font-semibold text-navy">
-                        First Last
-                        <span class="ml-2 align-middle bg-skybolt/10 text-skybolt px-2 py-0.5 rounded-full text-[11px] font-semibold">POS</span>
-                      </div>
-                      <div class="text-gray-600 text-sm mt-0.5">
-                        B/T: ?/? <span class="text-gray-400">•</span> Ht <span class="text-gray-400">•</span> Wt
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              -->
+            <!-- Mobile: single column; md+: two columns; light background, no heavy boxes -->
+            <ul class="rounded-xl bg-white/5 ring-1 ring-white/10 p-2 md:p-3 grid grid-cols-1 md:grid-cols-2 gap-y-1.5 md:gap-y-2 md:gap-x-6">
+              <li class="px-2 py-2 text-base md:text-lg">Griffin Blevins <span class="text-white/70">(33)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">JP Glover <span class="text-white/70">(16)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">Aidan Gosset <span class="text-white/70">(22)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">James Edward Hill <span class="text-white/70">(14)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">Asher Keene <span class="text-white/70">(47)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">Carson McClure <span class="text-white/70">(23)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">Owen Pilkinton <span class="text-white/70">(13)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">Landen Roper <span class="text-white/70">(8)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">Jack Ryan <span class="text-white/70">(15)</span></li>
+              <li class="px-2 py-2 text-base md:text-lg">Braxton Sharp <span class="text-white/70">(5)</span></li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
@@ -211,4 +144,5 @@
   </footer>
 </body>
 </html>
+
 
