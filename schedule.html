@@ -73,48 +73,46 @@
        style="background-image:repeating-linear-gradient(135deg, rgba(255,255,255,.08) 0 2px, rgba(255,255,255,0) 2px 16px);">
   </div>
 
-  <!-- Content wrapper: no max-width; reserve space for the right image with md:pr-[35%] -->
-  <!-- List card styled like the roster -->
-<div class="mx-auto w-[96%] md:w-[96%] lg:w-[96%] xl:w-[96%] 2xl:w-[94%]
+  <div class="mx-auto w-[96%] md:w-[96%] lg:w-[96%] xl:w-[96%] 2xl:w-[94%]
             bg-white text-navy rounded-2xl shadow-2xl ring-1 ring-navy/10">
 
-  <!-- Column labels (Date | Tournament | Location) -->
-  <div class="hidden md:grid grid-cols-[auto_1fr_auto] gap-3
+  <!-- Column labels -->
+  <div class="hidden md:grid grid-cols-[1fr_auto_auto] gap-3
               text-xs font-semibold uppercase tracking-wide
               text-navydark/70 bg-navy/5 rounded-t-2xl">
-    <div class="py-2 pl-4">Date</div>
-    <div class="py-2">Tournament</div>
-    <div class="py-2 pr-4 text-right">Location</div>
+    <div class="py-2 pl-4">Tournament</div>
+    <div class="py-2 text-center">Location</div>
+    <div class="py-2 pr-4 text-right">Date</div>
   </div>
 
   <!-- Rows -->
   <ul id="tournaments" class="divide-y divide-navy/10">
-    <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-03-29">
-      <div class="text-sm md:text-base text-gray-600">Mar 29–30, 2025</div>
+    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-03-29">
       <div class="text-base md:text-lg font-semibold">
         <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
           USSSA Spring Kickoff
         </a>
       </div>
-      <div class="text-sm md:text-base text-right text-navydark/70">Trussville, AL</div>
+      <div class="text-sm md:text-base text-navydark/70 text-center">Trussville, AL</div>
+      <div class="text-sm md:text-base text-gray-600 text-right">Mar 29–30, 2025</div>
     </li>
 
-    <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-09-20">
-      <div class="text-sm md:text-base text-gray-600">Sep 20–21, 2025</div>
+    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-09-20">
       <div class="text-base md:text-lg font-semibold">Falkville-Mountain</div>
-      <div class="text-sm md:text-base text-right text-navydark/70">Falkville-Mountain, AL</div>
+      <div class="text-sm md:text-base text-navydark/70 text-center">Falkville-Mountain, AL</div>
+      <div class="text-sm md:text-base text-gray-600 text-right">Sep 20–21, 2025</div>
     </li>
 
-    <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-10-04">
-      <div class="text-sm md:text-base text-gray-600">Oct 04–05, 2025</div>
+    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-10-04">
       <div class="text-base md:text-lg font-semibold">Priceville</div>
-      <div class="text-sm md:text-base text-right text-navydark/70">Priceville, AL</div>
+      <div class="text-sm md:text-base text-navydark/70 text-center">Priceville, AL</div>
+      <div class="text-sm md:text-base text-gray-600 text-right">Oct 04–05, 2025</div>
     </li>
 
-    <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-10-18">
-      <div class="text-sm md:text-base text-gray-600">Oct 18–19, 2025</div>
+    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-10-18">
       <div class="text-base md:text-lg font-semibold">Lincoln</div>
-      <div class="text-sm md:text-base text-right text-navydark/70">Lincoln, AL</div>
+      <div class="text-sm md:text-base text-navydark/70 text-center">Lincoln, AL</div>
+      <div class="text-sm md:text-base text-gray-600 text-right">Oct 18–19, 2025</div>
     </li>
   </ul>
 </div>
