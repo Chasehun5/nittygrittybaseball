@@ -59,65 +59,73 @@
   </nav>
 
 <main class="flex-1 flex flex-col">
-    <!-- Navy gradient + right image + left pinstripe background -->
 <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white min-h-full flex-1">
-  <!-- Right image panel -->
+  <!-- Right image panel (same width as before) -->
   <div class="absolute inset-y-0 right-0 w-[35%] hidden md:block">
     <img src="nittygrittylogo.jpg" alt="" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
   </div>
 
-  <!-- Full pinstripe background on the left (and full width on mobile) -->
+  <!-- PINSTRIPE BACKGROUND (behind everything on the left; full width on mobile) -->
   <div aria-hidden="true"
        class="absolute inset-0 md:right-[35%] z-0"
        style="background-image:repeating-linear-gradient(135deg, rgba(255,255,255,.08) 0 2px, rgba(255,255,255,0) 2px 16px);">
   </div>
 
-  <div class="mx-auto w-[96%] md:w-[96%] lg:w-[96%] xl:w-[96%] 2xl:w-[94%]
-            bg-white text-navy rounded-2xl shadow-2xl ring-1 ring-navy/10">
+  <!-- Content (reserved left space matches the image width via md:pr-[35%]) -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 pt-10 pb-12 md:pt-12 md:pb-12 md:pr-[35%]">
+    <h2 class="text-3xl font-extrabold mb-6">Tournaments</h2>
 
-  <!-- Column labels -->
-  <div class="hidden md:grid grid-cols-[1fr_auto_auto] gap-3
-              text-xs font-semibold uppercase tracking-wide
-              text-navydark/70 bg-navy/5 rounded-t-2xl">
-    <div class="py-2 pl-4">Tournament</div>
-    <div class="py-2 text-center">Location</div>
-    <div class="py-2 pr-4 text-right">Date</div>
+    <!-- Big centered card that fills most of the pinstripe area -->
+    <ul id="tournaments"
+        class="mx-auto w-full md:w-[92%] lg:w-[94%] xl:w-[96%] bg-white text-gray-900 rounded-2xl shadow-2xl ring-1 ring-gray-200 divide-y">
+      <!-- SAMPLE ITEMS (edit/keep) -->
+      <li class="p-5" data-date="2025-03-29">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Mar 29–30, 2025</span>
+            <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
+              USSSA Spring Kickoff
+            </a>
+          </div>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Trussville, AL</div>
+        </div>
+      </li>
+
+      <li class="p-5" data-date="2025-09-20">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Sep 20–21, 2025</span>
+            <span>Falkville-Mountain</span>
+          </div>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Falkville-Mountain, AL</div>
+        </div>
+      </li>
+
+      <li class="p-5" data-date="2025-10-04">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Oct 04–05, 2025</span>
+            <span>Priceville</span>
+          </div>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Priceville, AL</div>
+        </div>
+      </li>
+
+      <li class="p-5" data-date="2025-10-18">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Oct 18–19, 2025</span>
+            <span>Lincoln</span>
+          </div>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Lincoln, AL</div>
+        </div>
+      </li>
+    </ul>
   </div>
 
-  <!-- Rows -->
-  <ul id="tournaments" class="divide-y divide-navy/10">
-    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-03-29">
-      <div class="text-base md:text-lg font-semibold">
-        <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
-          USSSA Spring Kickoff
-        </a>
-      </div>
-      <div class="text-sm md:text-base text-navydark/70 text-center">Trussville, AL</div>
-      <div class="text-sm md:text-base text-gray-600 text-right">Mar 29–30, 2025</div>
-    </li>
-
-    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-09-20">
-      <div class="text-base md:text-lg font-semibold">Falkville-Mountain</div>
-      <div class="text-sm md:text-base text-navydark/70 text-center">Falkville-Mountain, AL</div>
-      <div class="text-sm md:text-base text-gray-600 text-right">Sep 20–21, 2025</div>
-    </li>
-
-    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-10-04">
-      <div class="text-base md:text-lg font-semibold">Priceville</div>
-      <div class="text-sm md:text-base text-navydark/70 text-center">Priceville, AL</div>
-      <div class="text-sm md:text-base text-gray-600 text-right">Oct 04–05, 2025</div>
-    </li>
-
-    <li class="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 md:py-3.5 px-4" data-date="2025-10-18">
-      <div class="text-base md:text-lg font-semibold">Lincoln</div>
-      <div class="text-sm md:text-base text-navydark/70 text-center">Lincoln, AL</div>
-      <div class="text-sm md:text-base text-gray-600 text-right">Oct 18–19, 2025</div>
-    </li>
-  </ul>
-</div>
-
   <script>
+    // Auto-sort items by date so you don't have to reorder them manually.
     document.addEventListener("DOMContentLoaded", () => {
       const ul = document.getElementById("tournaments");
       const items = Array.from(ul.querySelectorAll("li[data-date]"));
@@ -127,6 +135,7 @@
     });
   </script>
 </section>
+
 
 
   <!-- Sticky footer -->
