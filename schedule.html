@@ -61,73 +61,68 @@
 <main class="flex-1 flex flex-col">
     <!-- Navy gradient + right image + left pinstripe background -->
 <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white min-h-full flex-1">
-  <!-- Right image panel -->
+  <!-- Right image panel (same width as before) -->
   <div class="absolute inset-y-0 right-0 w-[35%] hidden md:block">
     <img src="nittygrittylogo.jpg" alt="" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
   </div>
 
-  <!-- Content area.
-       md:pr-[35%] reserves the same width as the right image,
-       so the "left space" is well-defined for centering the card. -->
-  <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-12 md:pr-[35%]">
+  <!-- PINSTRIPE BACKGROUND (behind everything on the left; full width on mobile) -->
+  <div aria-hidden="true"
+       class="absolute inset-0 md:right-[35%] z-0"
+       style="background-image:repeating-linear-gradient(135deg, rgba(255,255,255,.08) 0 2px, rgba(255,255,255,0) 2px 16px);">
+  </div>
+
+  <!-- Content (reserved left space matches the image width via md:pr-[35%]) -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 pt-10 pb-12 md:pt-12 md:pb-12 md:pr-[35%]">
     <h2 class="text-3xl font-extrabold mb-6">Tournaments</h2>
 
-    <!-- Wrapper centered in the left space with even padding for stripe reveal -->
-    <div class="relative mx-auto w-full md:w-[82%] lg:w-[84%] xl:w-[86%] p-3 md:p-5 rounded-[28px]">
-      <!-- PINSTRIPES (behind the card, evenly visible thanks to wrapper padding) -->
-      <div aria-hidden="true"
-           class="absolute inset-0 z-0 rounded-[28px] pointer-events-none"
-           style="background-image:repeating-linear-gradient(135deg, rgba(255,255,255,.10) 0 2px, rgba(255,255,255,0) 2px 16px);">
-      </div>
-
-      <!-- CARD -->
-      <ul id="tournaments"
-          class="relative z-10 bg-white text-gray-900 rounded-2xl shadow-xl ring-1 ring-gray-100 divide-y">
-        <!-- SAMPLE ITEMS (edit/keep) -->
-        <li class="p-5" data-date="2025-03-29">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Mar 29–30, 2025</span>
-              <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
-                USSSA Spring Kickoff
-              </a>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Trussville, AL</div>
+    <!-- Big centered card that fills most of the pinstripe area -->
+    <ul id="tournaments"
+        class="mx-auto w-full md:w-[92%] lg:w-[94%] xl:w-[96%] bg-white text-gray-900 rounded-2xl shadow-2xl ring-1 ring-gray-200 divide-y">
+      <!-- SAMPLE ITEMS (edit/keep) -->
+      <li class="p-5" data-date="2025-03-29">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Mar 29–30, 2025</span>
+            <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
+              USSSA Spring Kickoff
+            </a>
           </div>
-        </li>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Trussville, AL</div>
+        </div>
+      </li>
 
-        <li class="p-5" data-date="2025-09-20">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Sep 20–21, 2025</span>
-              <span>Falkville-Mountain</span>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Falkville-Mountain, AL</div>
+      <li class="p-5" data-date="2025-09-20">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Sep 20–21, 2025</span>
+            <span>Falkville-Mountain</span>
           </div>
-        </li>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Falkville-Mountain, AL</div>
+        </div>
+      </li>
 
-        <li class="p-5" data-date="2025-10-04">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Oct 04–05, 2025</span>
-              <span>Priceville</span>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Priceville, AL</div>
+      <li class="p-5" data-date="2025-10-04">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Oct 04–05, 2025</span>
+            <span>Priceville</span>
           </div>
-        </li>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Priceville, AL</div>
+        </div>
+      </li>
 
-        <li class="p-5" data-date="2025-10-18">
-          <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-            <div class="text-navy text-base md:text-lg font-semibold">
-              <span class="text-gray-500 font-normal mr-2">Oct 18–19, 2025</span>
-              <span>Lincoln</span>
-            </div>
-            <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Lincoln, AL</div>
+      <li class="p-5" data-date="2025-10-18">
+        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
+          <div class="text-navy text-base md:text-lg font-semibold">
+            <span class="text-gray-500 font-normal mr-2">Oct 18–19, 2025</span>
+            <span>Lincoln</span>
           </div>
-        </li>
-      </ul>
-    </div>
+          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Lincoln, AL</div>
+        </div>
+      </li>
+    </ul>
   </div>
 
   <script>
