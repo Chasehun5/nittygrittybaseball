@@ -59,13 +59,22 @@
   </nav>
 
   <main class="flex-1 flex flex-col">
-    <!-- Navy gradient + right image + left pinstripe background -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-navydark via-navy to-navydark text-white flex-1">
-      <!-- Right image panel -->
-      <div class="absolute inset-y-0 right-0 w-[35%] hidden md:block">
-        <img src="nittygrittylogo.jpg" alt="" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
-      </div>
+  <!-- Background: navy gradient + subtle pinstripes + soft glow -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-navydark via-navy to-navydark"></div>
+    <!-- subtle pinstripes -->
+    <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- 45° white line every 24px -->
+        <pattern id="ng-pinstripes" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <rect width="1" height="24" fill="white"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ng-pinstripes)"/>
+    </svg>
+    <!-- soft sky glow to add depth -->
+    <div class="pointer-events-none absolute -top-40 -right-32 w-[60vw] h-[60vw] rounded-full bg-skybolt/10 blur-3xl"></div>
+  </div>
 
       <!-- Left content -->
       <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-12">
