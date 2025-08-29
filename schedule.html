@@ -76,65 +76,66 @@
   <div class="relative z-10 px-2 sm:px-4 md:px-6 py-10 md:py-12 md:pr-[35%]">
     <h2 class="text-3xl font-extrabold mb-6">Tournaments</h2>
 
-    <!-- Wide, centered card that fills most of the striped area -->
-    <ul id="tournaments"
-        class="mx-auto w-[99%] md:w-[99%] lg:w-[99%] xl:w-[99%] 2xl:w-[99%]
-               bg-white text-gray-900 rounded-2xl shadow-2xl ring-1 ring-gray-200 divide-y">
-      <!-- SAMPLE ITEMS (edit/keep) -->
-      <li class="p-5" data-date="2025-03-29">
-        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-          <div class="text-navy text-base md:text-lg font-semibold">
-            <span class="text-gray-500 font-normal mr-2">Mar 29–30, 2025</span>
-            <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
-              USSSA Spring Kickoff
-            </a>
-          </div>
-          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Trussville, AL</div>
-        </div>
-      </li>
+   <!-- Wide, centered card that fills most of the striped area -->
+<ul id="tournaments"
+    class="mx-auto w-[99%] md:w-[99%] lg:w-[99%] xl:w-[99%] 2xl:w-[99%]
+           bg-white text-gray-900 rounded-2xl shadow-2xl ring-1 ring-gray-200 divide-y">
 
-      <li class="p-5" data-date="2025-09-20">
-        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-          <div class="text-navy text-base md:text-lg font-semibold">
-            <span class="text-gray-500 font-normal mr-2">Sep 20–21, 2025</span>
-            <span>Falkville-Mountain</span>
-          </div>
-          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Falkville-Mountain, AL</div>
-        </div>
-      </li>
+  <!-- Header row (won’t be sorted; hidden on small screens to save space) -->
+  <li class="hidden md:grid grid-cols-[auto_1fr_auto] gap-3
+             text-xs font-semibold uppercase tracking-wide text-navydark/70
+             bg-navy/5 rounded-t-2xl px-4 py-2">
+    <div>Date</div>
+    <div>Tournament</div>
+    <div class="text-right">Location</div>
+  </li>
 
-      <li class="p-5" data-date="2025-10-04">
-        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-          <div class="text-navy text-base md:text-lg font-semibold">
-            <span class="text-gray-500 font-normal mr-2">Oct 04–05, 2025</span>
-            <span>Priceville</span>
-          </div>
-          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Priceville, AL</div>
-        </div>
-      </li>
+  <!-- ITEMS -->
+  <li class="px-4 py-3" data-date="2025-03-29">
+    <div class="md:grid md:grid-cols-[auto_1fr_auto] md:items-center gap-3">
+      <div class="text-gray-600 text-sm md:text-base md:pr-2">Mar 29–30, 2025</div>
+      <div class="text-navy text-base md:text-lg font-semibold">
+        <a href="https://example.com/tournament/spring-kickoff" target="_blank" rel="noopener" class="hover:underline">
+          USSSA Spring Kickoff
+        </a>
+      </div>
+      <div class="text-gray-600 text-sm md:text-base md:text-right md:pl-2">Trussville, AL</div>
+    </div>
+  </li>
 
-      <li class="p-5" data-date="2025-10-18">
-        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-          <div class="text-navy text-base md:text-lg font-semibold">
-            <span class="text-gray-500 font-normal mr-2">Oct 18–19, 2025</span>
-            <span>Lincoln</span>
-          </div>
-          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Lincoln, AL</div>
-        </div>
-      </li>
+  <li class="px-4 py-3" data-date="2025-09-20">
+    <div class="md:grid md:grid-cols-[auto_1fr_auto] md:items-center gap-3">
+      <div class="text-gray-600 text-sm md:text-base md:pr-2">Sep 20–21, 2025</div>
+      <div class="text-navy text-base md:text-lg font-semibold">Falkville-Mountain</div>
+      <div class="text-gray-600 text-sm md:text-base md:text-right md:pl-2">Falkville-Mountain, AL</div>
+    </div>
+  </li>
 
-      <li class="p-5" data-date="2025-11-04">
-        <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
-          <div class="text-navy text-base md:text-lg font-semibold">
-            <span class="text-gray-500 font-normal mr-2">Nov 04–05, 2025</span>
-            <span>Unknown</span>
-          </div>
-          <div class="text-gray-600 text-sm md:text-base md:justify-self-end">Unknown</div>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <li class="px-4 py-3" data-date="2025-10-04">
+    <div class="md:grid md:grid-cols-[auto_1fr_auto] md:items-center gap-3">
+      <div class="text-gray-600 text-sm md:text-base md:pr-2">Oct 04–05, 2025</div>
+      <div class="text-navy text-base md:text-lg font-semibold">Priceville</div>
+      <div class="text-gray-600 text-sm md:text-base md:text-right md:pl-2">Priceville, AL</div>
+    </div>
+  </li>
 
+  <li class="px-4 py-3" data-date="2025-10-18">
+    <div class="md:grid md:grid-cols-[auto_1fr_auto] md:items-center gap-3">
+      <div class="text-gray-600 text-sm md:text-base md:pr-2">Oct 18–19, 2025</div>
+      <div class="text-navy text-base md:text-lg font-semibold">Lincoln</div>
+      <div class="text-gray-600 text-sm md:text-base md:text-right md:pl-2">Lincoln, AL</div>
+    </div>
+  </li>
+
+  <li class="px-4 py-3" data-date="2025-11-04">
+    <div class="md:grid md:grid-cols-[auto_1fr_auto] md:items-center gap-3">
+      <div class="text-gray-600 text-sm md:text-base md:pr-2">Nov 04–05, 2025</div>
+      <div class="text-navy text-base md:text-lg font-semibold">Unknown</div>
+      <div class="text-gray-600 text-sm md:text-base md:text-right md:pl-2">Unknown</div>
+    </div>
+  </li>
+</ul>
+    
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const ul = document.getElementById("tournaments");
