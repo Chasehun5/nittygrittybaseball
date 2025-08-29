@@ -67,20 +67,23 @@
     <div class="absolute inset-0 bg-gradient-to-l from-transparent via-navy/60 to-navydark/90"></div>
   </div>
 
-  <!-- Content -->
-  <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-12">
+  <!-- Content area.
+       md:pr-[35%] reserves the same width as the right image,
+       so the "left space" is well-defined for centering the card. -->
+  <div class="relative max-w-7xl mx-auto px-4 pt-10 pb-8 md:pt-12 md:pb-12 md:pr-[35%]">
     <h2 class="text-3xl font-extrabold mb-6">Tournaments</h2>
 
-    <!-- Wider left column + pinstripe behind the card -->
-    <div class="relative md:w-[66%] lg:w-[70%] xl:w-[72%]">
-      <!-- PINSTRIPE (behind the card) -->
+    <!-- Wrapper centered in the left space with even padding for stripe reveal -->
+    <div class="relative mx-auto w-full md:w-[82%] lg:w-[84%] xl:w-[86%] p-3 md:p-5 rounded-[28px]">
+      <!-- PINSTRIPES (behind the card, evenly visible thanks to wrapper padding) -->
       <div aria-hidden="true"
-           class="pointer-events-none absolute -inset-x-3 -inset-y-4 md:-inset-x-5 md:-inset-y-6 rounded-3xl -z-10"
-           style="background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.08) 0 2px,rgba(255,255,255,0) 2px 16px);">
+           class="absolute inset-0 z-0 rounded-[28px] pointer-events-none"
+           style="background-image:repeating-linear-gradient(135deg, rgba(255,255,255,.10) 0 2px, rgba(255,255,255,0) 2px 16px);">
       </div>
 
-      <!-- Card -->
-      <ul id="tournaments" class="bg-white text-gray-900 rounded-2xl shadow-xl ring-1 ring-gray-100 divide-y">
+      <!-- CARD -->
+      <ul id="tournaments"
+          class="relative z-10 bg-white text-gray-900 rounded-2xl shadow-xl ring-1 ring-gray-100 divide-y">
         <!-- SAMPLE ITEMS (edit/keep) -->
         <li class="p-5" data-date="2025-03-29">
           <div class="grid gap-1 md:grid-cols-[1fr_auto] md:items-center">
